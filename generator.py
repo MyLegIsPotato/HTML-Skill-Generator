@@ -1,3 +1,21 @@
+import tkinter
+from tkinter import messagebox
+
+top = tkinter.Tk()
+top.geometry("100x100")
+def helloCallBack():
+   msg = messagebox.showinfo( "Hello Python", inputEmptyStar.get())
+
+B = tkinter.Button(top, text = "Hello", command = helloCallBack)
+B.place(x = 50,y = 50)
+
+labelEmptyStar = tkinter.Label(top, text="Empty star symbol: ")
+labelEmptyStar.pack(side=tkinter.LEFT)
+inputEmptyStar = tkinter.Entry(top, bd=5)
+inputEmptyStar.pack(side=tkinter.RIGHT)
+
+top.mainloop()
+
 try:
     file = open("output.txt", "a")
 except:
